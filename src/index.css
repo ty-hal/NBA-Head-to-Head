@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+}
+
+.container{
+  width:100%;
+  text-align:center;
+  justify-content: center;
+  margin: auto;
+  overflow:hidden;
+}
+
+.highlight{
+  background-color: green;
+}
+
+/* TOP BAR OF THE WEBSITE (HEADER)  */
+header{
+  background:#4e6878;
+  color:black;
+  padding-top:10px;
+  min-height:70px;
+  border-bottom:lightsalmon 3px solid;
+}
+
+header a{
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:17px;
+  color:black;
+}
+
+header ul{
+  margin:0;
+  padding:0;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 8px;
+  font-weight:bold;
+}
+
+header .title-highlight, header a:hover{
+  color:red;
+}
+
+header .webname{
+  float:left;
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:30px;
+}
+
+/* PLAYER SEARCH AREA  */
+
+#player-1-name, #player-2-name, #search-button{
+  display: inline-block;
+  padding: 5px;
+  background: #e7e7e7;
+  border: 2px black solid;
+  font-family: "Nunito",sans-serif;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+#search-button{
+    cursor: pointer;
+}
+
+#search-button:hover{
+  background-color:#e7e7e754;
+}
+
+#search-button:active{
+  background-color:red;
+}
+
+/* PLAYER STATS */
+.player-stats{
+  margin: auto;
+  margin-top: 50px;
+  width: 90%;
+  line-height: 1.6;
+  font-size: 1.2em;
+  display: flex;
+  border: 1px red solid;
+}
+
+#player-1-stats{
+  width:50%;
+  background-color: lightcoral;
+  text-align:center;
+}
+
+#player-2-stats{
+  width:50%;
+  background-color: lightblue;
+  text-align:center;
+}
+
+
+#player-1-stats-list li, #player-2-stats-list li{
+  list-style: none;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
