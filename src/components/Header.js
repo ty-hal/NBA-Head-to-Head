@@ -10,8 +10,6 @@ const Header = () => {
                 <li className ="current"><a href="index.html">Home</a></li>
                 <li>Glossary</li>
                 <li>Contact</li>
-                {/* <li><a href="#">Glossary</a></li>
-                <li><a href="#">Contact</a></li> */}
             </ul>
         </nav>
     </header>

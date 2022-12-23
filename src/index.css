@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background:#4e6878ac;
 }
 
 .container{
@@ -10,17 +11,21 @@ body {
   overflow:hidden;
 }
 
-.highlight{
-  background-color: green;
+.better-stat{
+  background-color: rgba(0, 128, 0, 0.768);
+}
+
+.worst-stat{
+  background-color: rgba(255, 0, 0, 0.436);
 }
 
 /* TOP BAR OF THE WEBSITE (HEADER)  */
 header{
-  background:#4e6878;
-  color:black;
+  background:#4e6878;;
   padding-top:10px;
   min-height:70px;
-  border-bottom:lightsalmon 3px solid;
+  border-bottom:green 3px solid;
+  padding-left: 20px;
 }
 
 header a{
@@ -33,12 +38,13 @@ header a{
 header ul{
   margin:0;
   padding:0;
+  padding-right: 12px;
 }
 
 header li{
   float:left;
   display:inline;
-  padding: 0 8px;
+  padding: 0 0 0 8px;
   font-weight:bold;
 }
 
@@ -57,8 +63,7 @@ header nav{
 }
 
 /* PLAYER SEARCH AREA  */
-
-#player-1-name, #player-2-name, #search-button{
+#player-1-name, #player-2-name, #search-button, #season-1, #season-2{
   display: inline-block;
   padding: 5px;
   background: #e7e7e7;
@@ -69,8 +74,16 @@ header nav{
   margin: 0 10px;
 }
 
+#player-1, #player-2{
+  margin-bottom: 10px;
+}
+#season-1, #season-2{
+  width: 80px;
+}
+
 #search-button{
     cursor: pointer;
+    margin-left: auto;
 }
 
 #search-button:hover{
@@ -78,40 +91,95 @@ header nav{
 }
 
 #search-button:active{
-  background-color:red;
+  background-color:rgba(0, 128, 0, 0.53);
 }
 
 /* PLAYER STATS */
 .player-stats{
   margin: auto;
-  margin-top: 50px;
-  width: 90%;
+  width: 100%;
   line-height: 1.6;
   font-size: 1.2em;
   display: flex;
-  border: 1px red solid;
 }
 
 #player-1-stats{
   width:50%;
-  background-color: lightcoral;
-  text-align:center;
+  margin-right: 20px;
+  display: flex;
+  /* background-color: red; */
+}
+#player-1-img{
+  width: 50%;
+  visibility: hidden;
+}
+#player-1-info{
+  width: 50%;
+  text-align: right;
 }
 
 #player-2-stats{
   width:50%;
-  background-color: lightblue;
-  text-align:center;
+  margin-left: 20px;
+  display: flex;
+}
+#player-2-img{
+  width: 50%;
+  visibility: hidden;
+}
+#player-2-info{
+  width: 50%;
+  text-align: left;
 }
 
+
+
+
+#player-1-stats-list, #player-2-stats-list{
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
 
 #player-1-stats-list li, #player-2-stats-list li{
   list-style: none;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  margin: 5px 0;
 }
+
 
 /* FOOTER */
 footer {
-  position: fixed;
   bottom: 0;
-  text-align: center;
+  text-align: left;
+  position: fixed;
 }
+
+
+/* If the window is big  */
+@media screen and (min-width: 1100px) {
+  .player-stats img{
+    height: 315px;
+    max-width: 450px;
+    min-width: 380px;
+    visibility: visible;
+  }
+  #player-1-img{
+    margin: 100px 0 0 25px;
+  }
+  #player-2-img{
+    margin: 100px 25px 0 0;
+  }
+}
+
+/* If the window is small  */
+@media screen and (max-width: 1100px) {
+  .player-stats img{
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    visibility: hidden;
+  }
+}  
