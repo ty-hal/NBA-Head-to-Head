@@ -1,25 +1,192 @@
+import React, { useState, useRef, useEffect } from 'react';
 import Header from './components/Header';
 import Players from './components/Players';
 import Footer from './components/Footer';
+import playerNames from './data/player_names.txt';
+import seasons from './data/seasons.txt';
 
 let headshotData = [] // Object of the form (player ID : URL) for most NBA players
-  async function getHeadshotData(){
-      try{
-        // Get and return the JSON data
-        const response = await import('./data/players_headshots.json')
-        return response
-      }catch(err){
-        return err
-      }
-  }
+let NBAplayers = [] // NBA player names from txt file
+let NBAseasons = [] // NBA seasons from the txt file
+
+async function getHeadshotData(){
+    try{
+      // Get and return the JSON data
+      const response = await import('./data/players_headshots.json')
+      return response
+    }catch(err){
+      return err
+    }
+}
 getHeadshotData().then(function(response){
     headshotData = response // Save the JSOn data into headshotData
 })
+
+async function getNBAPlayers(){
+    try{
+      // Get and return the JSON data
+      let playerData = await fetch(playerNames)
+      return playerData.text()
+    }catch(err){
+      return err
+    }
+}
+getNBAPlayers().then(function(response){
+    NBAplayers = response.split("\r\n") // Save the txt data into NBAplayers array
+})
+
+async function getNBAseasons(){
+  try{
+    // Get and return the JSON data
+    let seasonData = await fetch(seasons)
+    return seasonData.text()
+  }catch(err){
+    return err
+  }
+}
+getNBAseasons().then(function(response){
+  NBAseasons = response.split("\r\n") // Save the txt data into NBAseasons array
+})
+
+
+const SearchbarDropdown = (props) => {
+  const { options1, options2, onInputChange} = props;
+  const ulRef1 = useRef();
+  const inputRef1 = useRef();
+  const ulRef2 = useRef();
+  const inputRef2 = useRef();
+  useEffect(() => {
+    inputRef1.current.addEventListener('click', (event) => {
+      event.stopPropagation();
+      ulRef1.current.style.display = 'flex';
+      ulRef1.current.style.flexDirection = "column";
+      onInputChange(event);
+    });
+    document.addEventListener('click', (event) => {
+      ulRef1.current.style.display = 'none';
+    });
+  }, []);
+  useEffect(() => {
+    inputRef2.current.addEventListener('click', (event) => {
+      event.stopPropagation();
+      ulRef2.current.style.display = 'flex';
+      ulRef2.current.style.flexDirection = "column";
+      onInputChange(event);
+    });
+    document.addEventListener('click', (event) => {
+      ulRef2.current.style.display = 'none';
+    });
+  }, []);
+  return (
+    <>
+      <div className="player-dropdowns">
+        <div className="search-bar-dropdown">
+          <input
+            id="search-bar-1"
+            type="text"
+            className="form-control"
+            placeholder="Player 1"
+            ref={inputRef1}
+            onChange={onInputChange}
+          />
+          <ul id="results-1" className="list-group" ref={ulRef1}>
+            {options1.map((option, index) => {
+              return (
+                <button
+                  type="button"
+                  key={index}
+                  onClick={(e) => {
+                    inputRef1.current.value = option;
+                  }}
+                  // className="list-group-item list-group-item-action"
+                >
+                  {option}
+                </button>
+              );
+            })}
+          </ul>
+        </div>
+        <input type="text" placeholder = "2021-2022" id = "season-1"/>
+      </div>
+
+      {/* Second one */}
+
+      <div className="player-dropdowns">
+        <div className="search-bar-dropdown">
+          <input
+            id="search-bar-2"
+            type="text"
+            className="form-control"
+            placeholder="Player 2"
+            ref={inputRef2}
+            onChange={onInputChange}
+          />
+          <ul id="results-2" className="list-group" ref={ulRef2}>
+            {options2.map((option, index) => {
+              return (
+                <button
+                  type="button"
+                  key={index}
+                  onClick={(e) => {
+                    inputRef2.current.value = option;
+                  }}
+                  // className="list-group-item list-group-item-action"
+                >
+                  {option}
+                </button>
+              );
+            })}
+          </ul>
+        </div>
+        <input type="text" placeholder = "2021-2022" id = "season-2"/>
+      </div>
+    </>
+  );
+};
 
 function App() {
   let player1 = {name: null, stats: null, season: null, img: null}; // Objects for player1 and player2
   let player2 = {name: null, stats: null, season: null, img: null};
 
+  const [options1, setOptions] = useState([]); // Player 1 search bar
+  const [options2, setOptions2] = useState([]); // Player 2 search bar
+
+
+  const onInputChange = (event) => {
+    if (event.target.id === "search-bar-1"){
+      if (event.target.value.length > 2) { // If user input is more than 2 characters long
+        setOptions(
+          NBAplayers.filter((option) => {
+            return option.toLowerCase().includes(event.target.value.toLowerCase())
+          }
+        ))
+      }
+      else {
+        setOptions(
+          NBAplayers.filter((option) => {
+            return false
+          }
+        ))
+      }
+    }
+    else if (event.target.id === "search-bar-2"){
+      if (event.target.value.length > 2) { // If user input is more than 2 characters long
+        setOptions2(
+          NBAplayers.filter((option) => {
+            return option.toLowerCase().includes(event.target.value.toLowerCase())
+          }
+        ))
+      }
+      else {
+        setOptions2(
+          NBAplayers.filter((option) => {
+            return false
+          }
+        ))
+      }
+    }
+
+  }
   const getPlayerStats = async (player) => {
     let url = new URL('https://www.balldontlie.io/api/v1/players'); // Get player info (to eventually get their ID)
     let param = {search: player};
@@ -83,7 +250,11 @@ function App() {
   return (
     <div className="container">
     <Header/>
-    <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2}/>
+    <div id="message">
+        <p>Please enter two NBA players and seasons to compare their season per game stats.</p>
+    </div>
+    <SearchbarDropdown options1={options1} options2={options2} onInputChange={onInputChange} />
+    <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2} NBAplayers={NBAplayers}/>
     <Footer />
   </div>
   );

@@ -9,6 +9,7 @@
     "assert": "^2.0.0",
     "babel": "^6.23.0",
     "buffer": "^6.0.3",
+    "fs": "^0.0.1-security",
     "gensync": "^1.0.0-beta.2",
     "http": "^0.0.1-security",
     "https": "^1.0.0",

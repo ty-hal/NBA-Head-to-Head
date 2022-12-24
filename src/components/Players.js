@@ -3,7 +3,7 @@ import React from 'react';
 // Array of all player stats IDs
 const statNames = ["#pts-1", "#pts-2", "#reb-1", "#reb-2", "#ast-1", "#ast-2", "#blk-1", "#blk-2", "#stl-1", "#stl-2", "#to-1", "#to-2", "#fga-1", "#fga-2", "#fg_pct-1", "#fg_pct-2", "#three-pa-1", "#three-pa-2", "#three_pct-1", "#three_pct-2", "#fta-1", "#fta-2", "#ft_pct-1", "#ft_pct-2", "#fouls-1", "#fouls-2", "#games-1", "#games-2", "#min-1", "#min-2"];
 
-const Players = ({player1, player2, btnClick, findStats}) => {
+const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
     const onSubmit = () => {
         // Hide previous headshots
         document.querySelector("#player-1-img").style.visibility="hidden"
@@ -19,7 +19,7 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         }
 
         // Overwrites player1 and player2 
-        btnClick(document.querySelector("#player-1-name").value, document.querySelector("#player-2-name").value);
+        btnClick(document.querySelector("#search-bar-1").value, document.querySelector("#search-bar-2").value);
 
         // Gets the stats and headshot URL for player1 and player 2
         findStats()
@@ -188,16 +188,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
     return (
         <>
         <div className="nba-search">
-            <p>Please enter a season and two players to compare their stats.</p>
             <div className="nba-players">
-                <div id="player-1">
+                {/* <div id="player-1">
                     <input type="text" placeholder = "Player 1" id = "player-1-name"/>
                     <input type="text" placeholder = "2021-2022" id = "season-1"/>
                 </div>
                 <div id="player-2">
                     <input type="text" placeholder = "Player 2" id = "player-2-name"/>
                     <input type="text" placeholder = "2021-2022" id = "season-2"/>
-                </div>
+                </div> */}
                 <input type="submit" value="Search" id = "search-button" onClick={onSubmit}/>
             </div>
             
