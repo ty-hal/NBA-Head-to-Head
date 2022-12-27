@@ -1,18 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Header from './components/Header';
-import Players from './components/Players';
-import Footer from './components/Footer';
-import playerNames from './data/player_names.txt';
-import seasons from './data/seasons.txt';
+import Players from '../components/Players';
+import playerNames from '../data/player_names.txt';
 
 let headshotData = [] // Object of the form (player ID : URL) for most NBA players
 let NBAplayers = [] // NBA player names from txt file
-let NBAseasons = [] // NBA seasons from the txt file
 
 async function getHeadshotData(){
     try{
       // Get and return the JSON data
-      const response = await import('./data/players_headshots.json')
+      const response = await import('../data/players_headshots.json')
       return response
     }catch(err){
       return err
@@ -35,20 +31,53 @@ getNBAPlayers().then(function(response){
     NBAplayers = response.split("\r\n") // Save the txt data into NBAplayers array
 })
 
-async function getNBAseasons(){
-  try{
-    // Get and return the JSON data
-    let seasonData = await fetch(seasons)
-    return seasonData.text()
-  }catch(err){
-    return err
-  }
+function arrowKeyEvents(playerResultsID, playerSearchID, setOptions){
+  let i = -1
+  window.addEventListener("keydown", event => {
+    let childs = document.getElementById(playerResultsID).children;
+    if (event.code !== "Enter"){
+      for (let c of childs){
+        c.style.backgroundColor = "white";
+        c.onmouseover= function(e){this.style.backgroundColor = '#638498';};
+        c.onmouseout= function(e){this.style.backgroundColor = 'white'; };
+        c.onfocus= function(e){this.style.backgroundColor = '#638498'; };
+      }
+    }
+    switch(event.code) {
+      case "Enter":
+        for (let ccc of document.getElementById(playerResultsID).children){
+          if (ccc.style.backgroundColor !== "white"){
+            document.getElementById(playerSearchID).value = ccc.innerHTML;
+            setOptions(
+              NBAplayers.filter((option) => {
+                return false
+              }
+            ))
+          }
+        }
+        break;
+      case "ArrowDown":
+        i++;
+        if (i >= 0){
+          childs[Math.abs(i) % childs.length].style.backgroundColor = "#638498";
+        }
+        else
+          childs[childs.length - 1 - Math.abs(i+1) % childs.length].style.backgroundColor = "#638498";
+          break;
+      case "ArrowUp":
+        i--;
+        if (i >= 0)
+          childs[Math.abs(i) % childs.length].style.backgroundColor = "#638498";
+        else if ( i === -1){
+          childs[childs.length - 1].style.backgroundColor = "#638498";
+        }
+        else
+          childs[childs.length - 1 - Math.abs(i+1) % childs.length].style.backgroundColor = "#638498";
+        break;
+    }
+  })
 }
-getNBAseasons().then(function(response){
-  NBAseasons = response.split("\r\n") // Save the txt data into NBAseasons array
-})
-
-
+    
 const SearchbarDropdown = (props) => {
   const { options1, options2, onInputChange} = props;
   const ulRef1 = useRef();
@@ -56,11 +85,33 @@ const SearchbarDropdown = (props) => {
   const ulRef2 = useRef();
   const inputRef2 = useRef();
   useEffect(() => {
+    inputRef1.current.addEventListener('keyup', function(event) {
+      if (event.code === "Tab"){
+        event.stopPropagation();
+        ulRef2.current.style.display = 'none';
+        ulRef1.current.style.display = 'flex';
+        ulRef1.current.style.flexDirection = "column";
+        onInputChange(event);
+      }
+    });
+
+    inputRef2.current.addEventListener('keyup', function(event) {
+      if (event.code === "Tab"){
+        event.stopPropagation();
+        ulRef1.current.style.display = 'none';
+        ulRef2.current.style.display = 'flex';
+        ulRef2.current.style.flexDirection = "column";
+        onInputChange(event);
+      }
+    });
+
     inputRef1.current.addEventListener('click', (event) => {
       event.stopPropagation();
+      ulRef2.current.style.display = 'none';
       ulRef1.current.style.display = 'flex';
       ulRef1.current.style.flexDirection = "column";
       onInputChange(event);
+
     });
     document.addEventListener('click', (event) => {
       ulRef1.current.style.display = 'none';
@@ -69,6 +120,7 @@ const SearchbarDropdown = (props) => {
   useEffect(() => {
     inputRef2.current.addEventListener('click', (event) => {
       event.stopPropagation();
+      ulRef1.current.style.display = 'none';
       ulRef2.current.style.display = 'flex';
       ulRef2.current.style.flexDirection = "column";
       onInputChange(event);
@@ -76,6 +128,9 @@ const SearchbarDropdown = (props) => {
     document.addEventListener('click', (event) => {
       ulRef2.current.style.display = 'none';
     });
+    //DOWN
+  
+    //UP
   }, []);
   return (
     <>
@@ -144,25 +199,26 @@ const SearchbarDropdown = (props) => {
   );
 };
 
-function App() {
+function Home() {
   let player1 = {name: null, stats: null, season: null, img: null}; // Objects for player1 and player2
   let player2 = {name: null, stats: null, season: null, img: null};
 
-  const [options1, setOptions] = useState([]); // Player 1 search bar
+  const [options1, setOptions1] = useState([]); // Player 1 search bar
   const [options2, setOptions2] = useState([]); // Player 2 search bar
 
 
   const onInputChange = (event) => {
     if (event.target.id === "search-bar-1"){
       if (event.target.value.length > 2) { // If user input is more than 2 characters long
-        setOptions(
+        setOptions1(
           NBAplayers.filter((option) => {
             return option.toLowerCase().includes(event.target.value.toLowerCase())
           }
         ))
+        arrowKeyEvents("results-1", "search-bar-1", setOptions1)
       }
       else {
-        setOptions(
+        setOptions1(
           NBAplayers.filter((option) => {
             return false
           }
@@ -176,6 +232,8 @@ function App() {
             return option.toLowerCase().includes(event.target.value.toLowerCase())
           }
         ))
+        arrowKeyEvents("results-2", "search-bar-2", setOptions2)
+
       }
       else {
         setOptions2(
@@ -249,15 +307,13 @@ function App() {
 
   return (
     <div className="container">
-    <Header/>
-    <div id="message">
-        <p>Please enter two NBA players and seasons to compare their season per game stats.</p>
+      <div id="message">
+          <p>Enter two players and seasons they played in to compare their stats. Most player data from 1982 to the current season is available, but current season data may be inaccurate.</p>
+      </div>
+      <SearchbarDropdown options1={options1} options2={options2} onInputChange={onInputChange} />
+      <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2}/>
     </div>
-    <SearchbarDropdown options1={options1} options2={options2} onInputChange={onInputChange} />
-    <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2} NBAplayers={NBAplayers}/>
-    <Footer />
-  </div>
   );
 }
 
-export default App;
+export default Home;

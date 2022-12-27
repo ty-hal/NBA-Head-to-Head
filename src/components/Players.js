@@ -3,18 +3,27 @@ import React from 'react';
 // Array of all player stats IDs
 const statNames = ["#pts-1", "#pts-2", "#reb-1", "#reb-2", "#ast-1", "#ast-2", "#blk-1", "#blk-2", "#stl-1", "#stl-2", "#to-1", "#to-2", "#fga-1", "#fga-2", "#fg_pct-1", "#fg_pct-2", "#three-pa-1", "#three-pa-2", "#three_pct-1", "#three_pct-2", "#fta-1", "#fta-2", "#ft_pct-1", "#ft_pct-2", "#fouls-1", "#fouls-2", "#games-1", "#games-2", "#min-1", "#min-2"];
 
-const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
+const Players = ({player1, player2, btnClick, findStats}) => {
     const onSubmit = () => {
         // Hide previous headshots
         document.querySelector("#player-1-img").style.visibility="hidden"
         document.querySelector("#player-2-img").style.visibility="hidden"
+        document.querySelector("#player-1-stats-name").innerHTML=""
+        document.querySelector("#player-2-stats-name").innerHTML=""
+        statNames.forEach(stat => {
+            document.querySelector(stat).innerHTML=""
+            document.querySelector(stat).style.border = "0px"
+        });
+
+        // Check if valid players are inputted
+        if (!document.querySelector("#search-bar-1").value || !document.querySelector("#search-bar-2").value){
+            document.querySelector("#search-error").innerHTML="Enter valid player(s).";
+            return;
+        }
 
         // Check if valid seasons are inputted
         if (parseInt(document.querySelector("#season-1").value.substring(0,4)) !== parseInt(document.querySelector("#season-1").value.substring(5,9))-1 || parseInt(document.querySelector("#season-2").value.substring(0,4)) !== parseInt(document.querySelector("#season-2").value.substring(5,9))-1){
             document.querySelector("#search-error").innerHTML="Enter valid season(s).";
-            document.querySelector("#player-1-stats-name").innerHTML=""
-            document.querySelector("#player-2-stats-name").innerHTML=""
-            statNames.forEach(stat => document.querySelector(stat).innerHTML="")
             return;
         }
 
@@ -23,13 +32,15 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
 
         // Gets the stats and headshot URL for player1 and player 2
         findStats()
-        .then(() => console.log(player1, player2)) // Delete later
         .then(() => showStats(player1, player2)) // Update all of the HTML
         .catch(() => { // If something goes wrong
-            document.querySelector("#player-1-stats-name").innerHTML=""
-            document.querySelector("#player-2-stats-name").innerHTML=""
-            document.querySelector("#search-error").innerHTML="Either enter valid player names or try different player(s) or season(s)."
-            statNames.forEach(stat => document.querySelector(stat).innerHTML="")
+            statNames.forEach(stat => {
+                document.querySelector("#player-1-stats-name").innerHTML=""
+                document.querySelector("#player-2-stats-name").innerHTML=""
+                document.querySelector(stat).innerHTML=""
+                document.querySelector(stat).style.border = "0px"
+            });
+            document.querySelector("#search-error").innerHTML="There is no available data for one or both players in the inputted seasons."
         });
     }
     
@@ -42,6 +53,7 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
 
         // Remove all classes from each stat ul
         statNames.forEach( stat => {
+            document.querySelector(stat).style.border = "0.5px black solid";
             document.querySelector(stat).classList.remove("better-stat")
             document.querySelector(stat).classList.remove("worst-stat")});
 
@@ -70,7 +82,14 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
                 player1.stats.pts < player2.stats.pts ? document.querySelector("#pts-1").classList.add("worst-stat") : document.querySelector("#pts-2").classList.add("worst-stat");
             }
         }
-
+        if (typeof player1.stats.reb !== 'undefined' && player1.stats.reb !== null && typeof player2.stats.reb !== 'undefined' && player2.stats.reb !== null){
+            document.querySelector("#reb-1").innerHTML=`${player1.stats.reb} REB`
+            document.querySelector("#reb-2").innerHTML=`${player2.stats.reb} REB`
+            if (player1.stats.reb !== player2.stats.reb){
+                player1.stats.reb > player2.stats.reb ? document.querySelector("#reb-1").classList.add("better-stat") : document.querySelector("#reb-2").classList.add("better-stat");
+                player1.stats.reb < player2.stats.reb ? document.querySelector("#reb-1").classList.add("worst-stat") : document.querySelector("#reb-2").classList.add("worst-stat");
+            }
+        }
         if (typeof player1.stats.reb !== 'undefined' && player1.stats.reb !== null && typeof player2.stats.reb !== 'undefined' && player2.stats.reb !== null){
             document.querySelector("#reb-1").innerHTML=`${player1.stats.reb} REB`
             document.querySelector("#reb-2").innerHTML=`${player2.stats.reb} REB`
@@ -189,14 +208,6 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
         <>
         <div className="nba-search">
             <div className="nba-players">
-                {/* <div id="player-1">
-                    <input type="text" placeholder = "Player 1" id = "player-1-name"/>
-                    <input type="text" placeholder = "2021-2022" id = "season-1"/>
-                </div>
-                <div id="player-2">
-                    <input type="text" placeholder = "Player 2" id = "player-2-name"/>
-                    <input type="text" placeholder = "2021-2022" id = "season-2"/>
-                </div> */}
                 <input type="submit" value="Search" id = "search-button" onClick={onSubmit}/>
             </div>
             
@@ -221,8 +232,8 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
                             <li id="fta-1"></li>
                             <li id="ft_pct-1"></li>
                             <li id="fouls-1"></li>
-                            <li id="games-1"></li>
                             <li id="min-1"></li>
+                            <li id="games-1"></li>
                         </ul>
                     </div>
                 </div> 
@@ -243,8 +254,8 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
                             <li id="fta-2"></li>
                             <li id="ft_pct-2"></li>
                             <li id="fouls-2"></li>
-                            <li id="games-2"></li>
                             <li id="min-2"></li>
+                            <li id="games-2"></li>
                         </ul>
                     </div>
                     <img src="" id="player-2-img" alt=""/>
@@ -254,5 +265,5 @@ const Players = ({player1, player2, btnClick, findStats, NBAplayers}) => {
         </>
   )
 }
-
+  
 export default Players

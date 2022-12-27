@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background:#4e6878ac;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .container{
@@ -14,62 +15,99 @@ body {
 .better-stat{
   background-color: rgba(0, 128, 0, 0.768);
 }
-
 .worst-stat{
   background-color: rgba(255, 0, 0, 0.436);
 }
 
-/* TOP BAR OF THE WEBSITE (HEADER)  */
+/* LAYOUT PAGE */
+nav ul li a{ 
+  text-transform: none;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
 header{
-  background:#4e6878;;
+  background: #4e6878da;
   padding-top:10px;
   min-height:70px;
-  border-bottom:green 3px solid;
+  border-bottom:rgba(0, 0, 0, 0.351) 3px solid;
   padding-left: 20px;
+}
+
+.webname{
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+#nba-logo{
+  width: 70px;
+  margin-right: 10px;
+}
+.title{
+  margin-top: 1px;
+  text-transform: none;
+  font:  600 40px "Nunito",sans-serif;
+  -webkit-text-stroke: 0.4px white;
+}
+
+.blue-highlight{
+  color: #006BB7;
+}
+.red-highlight{
+  color: #ED174B;
+}
+.white-highlight{
+  color: rgba(255, 255, 255, 0.347);
+}
+.black-highlight{
+  color: black;
+  font-size: 25px;
+  visibility: hidden;
+}
+
+header li a:hover{
+  color: #ED174B;
 }
 
 header a{
   text-decoration:none;
   text-transform:uppercase;
-  font-size:17px;
   color:black;
 }
 
 header ul{
   margin:0;
   padding:0;
-  padding-right: 12px;
+  padding-right: 14px;
 }
 
 header li{
   float:left;
   display:inline;
-  padding: 0 0 0 8px;
+  padding-left: 16px;
   font-weight:bold;
-}
-
-header .title-highlight, header a:hover{
-  color:red;
 }
 
 header .webname{
   float:left;
   margin:0;
+  position: relative;
 }
 
 header nav{
   float:right;
-  margin-top:30px;
+  margin-top: 25px;
 }
 
+
+
+/* HOME PAGE */
 #message{
-  /* margin: auto;
-  text-align: center;
-  align-content: center; */
+  margin: auto;
+  width: 95%;
 }
-
-
-/* PLAYER SEARCH AREAS */
+  
+  /* PLAYER SEARCH AREAS */
 .player-dropdowns{
   width:100%;
   overflow:hidden;
@@ -80,11 +118,15 @@ header nav{
   padding: 5px;
   background: #e7e7e7;
   border: 2px black solid;
-  font-family: "Nunito",sans-serif;
   font-size: 16px;
   border-radius: 10px;
   margin: 0 10px;  
   width: 80px;
+  font-weight: normal;
+}
+
+#search-button{
+  color: black;
 }
 
 .search-bar-dropdown {
@@ -99,7 +141,6 @@ header nav{
   padding: 5px;
   background: #e7e7e7;
   border: 2px black solid;
-  font-family: "Nunito",sans-serif;
   font-size: 16px;
   border-radius: 10px;
   margin-top: 10x;
@@ -124,10 +165,11 @@ header nav{
   padding: 5px;
   margin-bottom: 1px;
   font-size: 13px;
+  color: black;
 }
 
-#results-1 > button:hover, #results-2 > button:hover {
-  background: rgb(48, 117, 48);
+#results-1 > button:hover, #results-2 > button:hover, #results-1 > button:focus, #results-2 > button:focus {
+  background-color: #638498;
 }
 
 ::-webkit-scrollbar {
@@ -145,12 +187,11 @@ header nav{
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover{
   background: #555;
 }
 
-
-/* SEARCH BUTTON */
+  /* SEARCH BUTTON */
 #search-button{
   cursor: pointer;
   margin-left: auto;
@@ -161,12 +202,14 @@ header nav{
 }
 
 #search-button:active{
-  background-color:rgba(0, 128, 0, 0.53);
+  background-color:#006bb772;
+  transform: scale(1.05) perspective(1px)
 }
 
-
-
-/* PLAYER STATS */
+  /* PLAYER STATS */
+#search-error{
+  margin-top: 10px;
+}
 .player-stats{
   margin: auto;
   width: 100%;
@@ -217,21 +260,46 @@ header nav{
   margin: 5px 0;
 }
 
+/* GLOSSARY PAGE */
+#glossary{
+  width:90%;
+  margin: auto;
+  overflow:hidden;
+  line-height: 2em;
+}
 
-/* FOOTER */
-footer, #bottom-msg {
-  bottom: 0;
-  position: fixed;
-  text-align: center;
+#glossary-info{
+  margin-top: 30px;
+}
+
+#glossary-stats p{
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+#glossary ul li{
+  list-style: none;
+  margin: auto;
+}
+
+#glossary ul{
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 17px;
 }
 
 
-/* If the window is big  */
-@media screen and (min-width: 1100px) {
+
+/* LARGE SIZED WINDOW */
+@media screen and (min-width: 1170px) {
   .player-stats img{
-    height: 315px;
+    height: 250px; /*120 to 180*/
     max-width: 450px;
-    min-width: 410px;
+    min-width: 350px;
     visibility: visible;
   }
   #player-1-img{
@@ -240,14 +308,38 @@ footer, #bottom-msg {
   #player-2-img{
     margin: 100px 25px 0 0;
   }
+
 }
 
-/* If the window is small  */
-@media screen and (max-width: 1100px) {
+
+@media screen and (max-width: 570px) {
+  .webname{
+    width: 70px;
+    height: 70px;
+    padding-top: 0px;
+  }
+  .title{
+    visibility: hidden;
+  }
+}
+/* SMALL SIZED WINDOW (MINIMIZED OR PHONE)*/
+@media screen and (max-width: 1170px) {
   .player-stats img{
     width: 0px;
     height: 0px;
     margin: 0px;
     visibility: hidden;
+  }
+  #player-1-info{
+    width: 100%;
+  }
+  #player-1-img{
+    width: 0%;
+  }
+  #player-2-img{
+    width: 0%;
+  }
+  #player-2-info{
+    width: 100%;
   }
 }  
