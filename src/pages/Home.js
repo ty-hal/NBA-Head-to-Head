@@ -205,7 +205,6 @@ function Home() {
   const [options1, setOptions1] = useState([]); // Player 1 search bar
   const [options2, setOptions2] = useState([]); // Player 2 search bar
 
-
   const onInputChange = (event) => {
     if (event.target.id === "search-bar-1"){
       if (event.target.value.length > 2) { // If user input is more than 2 characters long
@@ -302,6 +301,7 @@ function Home() {
     });
     player1.name = newPlayer1;
     player2.name = newPlayer2;
+    console.log(NBAplayers)
   }
 
   return (
