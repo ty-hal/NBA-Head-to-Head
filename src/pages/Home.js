@@ -74,6 +74,8 @@ function arrowKeyEvents(playerResultsID, playerSearchID, setOptions){
         else
           childs[childs.length - 1 - Math.abs(i+1) % childs.length].style.backgroundColor = "#638498";
         break;
+      default:
+        break;
     }
   })
 }
@@ -116,7 +118,7 @@ const SearchbarDropdown = (props) => {
     document.addEventListener('click', (event) => {
       ulRef1.current.style.display = 'none';
     });
-  }, []);
+  }, [onInputChange]);
   useEffect(() => {
     inputRef2.current.addEventListener('click', (event) => {
       event.stopPropagation();
@@ -128,10 +130,7 @@ const SearchbarDropdown = (props) => {
     document.addEventListener('click', (event) => {
       ulRef2.current.style.display = 'none';
     });
-    //DOWN
-  
-    //UP
-  }, []);
+  }, [onInputChange]);
   return (
     <>
       <div className="player-dropdowns">
