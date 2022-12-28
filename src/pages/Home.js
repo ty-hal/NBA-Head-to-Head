@@ -28,7 +28,8 @@ async function getNBAPlayers(){
     }
 }
 getNBAPlayers().then(function(response){
-    NBAplayers = response.split("\r\n") // Save the txt data into NBAplayers array
+  NBAplayers = response;
+    // NBAplayers = response.split("\r\n") // Save the txt data into NBAplayers array
 })
 
 function arrowKeyEvents(playerResultsID, playerSearchID, setOptions){
@@ -116,6 +117,7 @@ const SearchbarDropdown = (props) => {
 
     });
     document.addEventListener('click', (event) => {
+      // console.log(ulRef1.current.style)
       ulRef1.current.style.display = 'none';
     });
   }, [onInputChange]);
@@ -152,7 +154,6 @@ const SearchbarDropdown = (props) => {
                   onClick={(e) => {
                     inputRef1.current.value = option;
                   }}
-                  // className="list-group-item list-group-item-action"
                 >
                   {option}
                 </button>
@@ -162,9 +163,6 @@ const SearchbarDropdown = (props) => {
         </div>
         <input type="text" placeholder = "YYYY" id = "season-1"/>
       </div>
-
-      {/* Second one */}
-
       <div className="player-dropdowns">
         <div className="search-bar-dropdown">
           <input
@@ -184,7 +182,6 @@ const SearchbarDropdown = (props) => {
                   onClick={(e) => {
                     inputRef2.current.value = option;
                   }}
-                  // className="list-group-item list-group-item-action"
                 >
                   {option}
                 </button>
@@ -289,6 +286,7 @@ function Home() {
     let player2Stats = await getSeasonStats(player2ID.data[0].id, player2.season);
     player2.stats = player2Stats.data[0];
 
+
     getPlayersImgs(player1, player2); //Get the img URLs for player1 and player2
   }
   const editPlayers = (newPlayer1, newPlayer2) => {
@@ -301,6 +299,8 @@ function Home() {
     });
     player1.name = newPlayer1;
     player2.name = newPlayer2;
+
+
     console.log(NBAplayers)
   }
 
