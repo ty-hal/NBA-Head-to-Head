@@ -80,8 +80,14 @@ const Players = ({player1, player2, btnClick, findStats}) => {
             document.querySelector("#pts-2").innerHTML=`${player2.stats.pts} PTS`
             // If they aren't equal, assign the red and green colors (classes)
             if (player1.stats.pts !== player2.stats.pts){
+                document.querySelector("#pts-1").classList.remove("equal-stat");
+                document.querySelector("#pts-2").classList.remove("equal-stat");
                 player1.stats.pts > player2.stats.pts ? document.querySelector("#pts-1").classList.add("better-stat") : document.querySelector("#pts-2").classList.add("better-stat");
                 player1.stats.pts < player2.stats.pts ? document.querySelector("#pts-1").classList.add("worst-stat") : document.querySelector("#pts-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#pts-1").classList.add("equal-stat");
+                document.querySelector("#pts-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -93,8 +99,14 @@ const Players = ({player1, player2, btnClick, findStats}) => {
             document.querySelector("#reb-1").innerHTML=`${player1.stats.reb} REB`
             document.querySelector("#reb-2").innerHTML=`${player2.stats.reb} REB`
             if (player1.stats.reb !== player2.stats.reb){
+                document.querySelector("#reb-1").classList.remove("equal-stat");
+                document.querySelector("#reb-2").classList.remove("equal-stat");
                 player1.stats.reb > player2.stats.reb ? document.querySelector("#reb-1").classList.add("better-stat") : document.querySelector("#reb-2").classList.add("better-stat");
                 player1.stats.reb < player2.stats.reb ? document.querySelector("#reb-1").classList.add("worst-stat") : document.querySelector("#reb-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#reb-1").classList.add("equal-stat");
+                document.querySelector("#reb-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -105,9 +117,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.ast !== 'undefined' && player1.stats.ast !== null && typeof player2.stats.ast !== 'undefined' && player2.stats.ast !== null){
             document.querySelector("#ast-1").innerHTML=`${player1.stats.ast} AST`
             document.querySelector("#ast-2").innerHTML=`${player2.stats.ast} AST`
+            document.querySelector("#ast-1").classList.remove("equal-stat");
+            document.querySelector("#ast-2").classList.remove("equal-stat");
             if (player1.stats.ast !== player2.stats.ast){
                 player1.stats.ast > player2.stats.ast ? document.querySelector("#ast-1").classList.add("better-stat") : document.querySelector("#ast-2").classList.add("better-stat");
                 player1.stats.ast < player2.stats.ast ? document.querySelector("#ast-1").classList.add("worst-stat") : document.querySelector("#ast-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#ast-1").classList.add("equal-stat");
+                document.querySelector("#ast-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -118,9 +136,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.blk !== 'undefined' && player1.stats.blk !== null && typeof player2.stats.blk !== 'undefined' && player2.stats.blk !== null){
             document.querySelector("#blk-1").innerHTML=`${player1.stats.blk} BLK`
             document.querySelector("#blk-2").innerHTML=`${player2.stats.blk} BLK`
+            document.querySelector("#blk-1").classList.remove("equal-stat");
+            document.querySelector("#blk-2").classList.remove("equal-stat");
             if (player1.stats.blk !== player2.stats.blk){
                 player1.stats.blk > player2.stats.blk ? document.querySelector("#blk-1").classList.add("better-stat") : document.querySelector("#blk-2").classList.add("better-stat");
                 player1.stats.blk < player2.stats.blk ? document.querySelector("#blk-1").classList.add("worst-stat") : document.querySelector("#blk-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#blk-1").classList.add("equal-stat");
+                document.querySelector("#blk-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -131,9 +155,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.stl !== 'undefined' && player1.stats.stl !== null && typeof player2.stats.stl !== 'undefined' && player2.stats.stl !== null){
             document.querySelector("#stl-1").innerHTML=`${player1.stats.stl} STL`
             document.querySelector("#stl-2").innerHTML=`${player2.stats.stl} STL`
+            document.querySelector("#stl-1").classList.remove("equal-stat");
+            document.querySelector("#stl-2").classList.remove("equal-stat");
             if (player1.stats.stl !== player2.stats.stl){
                 player1.stats.stl > player2.stats.stl ? document.querySelector("#stl-1").classList.add("better-stat") : document.querySelector("#stl-2").classList.add("better-stat");
                 player1.stats.stl < player2.stats.stl ? document.querySelector("#stl-1").classList.add("worst-stat") : document.querySelector("#stl-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#stl-1").classList.add("equal-stat");
+                document.querySelector("#stl-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -144,9 +174,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.turnover !== 'undefined' && player1.stats.turnover !== null && typeof player2.stats.turnover !== 'undefined' && player2.stats.turnover !== null){
             document.querySelector("#to-1").innerHTML=`${player1.stats.turnover} TO`
             document.querySelector("#to-2").innerHTML=`${player2.stats.turnover} TO`
+            document.querySelector("#to-1").classList.remove("equal-stat");
+            document.querySelector("#to-2").classList.remove("equal-stat");
             if (player1.stats.turnover !== player2.stats.turnover){
                 player1.stats.turnover < player2.stats.turnover ? document.querySelector("#to-1").classList.add("better-stat") : document.querySelector("#to-2").classList.add("better-stat");
                 player1.stats.turnover > player2.stats.turnover ? document.querySelector("#to-1").classList.add("worst-stat") : document.querySelector("#to-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#to-1").classList.add("equal-stat");
+                document.querySelector("#to-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -158,8 +194,14 @@ const Players = ({player1, player2, btnClick, findStats}) => {
             document.querySelector("#fga-1").innerHTML=`${player1.stats.fga} FGA`
             document.querySelector("#fga-2").innerHTML=`${player2.stats.fga} FGA`
             if (player1.stats.fga !== player2.stats.fga){
+                document.querySelector("#fga-1").classList.remove("equal-stat");
+                document.querySelector("#fga-2").classList.remove("equal-stat");
                 player1.stats.fga > player2.stats.fga ? document.querySelector("#fga-1").classList.add("better-stat") : document.querySelector("#fga-2").classList.add("better-stat");
                 player1.stats.fga < player2.stats.fga ? document.querySelector("#fga-1").classList.add("worst-stat") : document.querySelector("#fga-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#fga-1").classList.add("equal-stat");
+                document.querySelector("#fga-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -170,9 +212,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.fg_pct !== 'undefined' && player1.stats.fg_pct !== null && typeof player2.stats.fg_pct !== 'undefined' && player2.stats.fg_pct !== null){
             document.querySelector("#fg_pct-1").innerHTML=`${player1.stats.fg_pct} FG%`
             document.querySelector("#fg_pct-2").innerHTML=`${player2.stats.fg_pct} FG%`
+            document.querySelector("#fg_pct-1").classList.remove("equal-stat");
+            document.querySelector("#fg_pct-2").classList.remove("equal-stat");
             if (player1.stats.fg_pct !== player2.stats.fg_pct){
                 player1.stats.fg_pct > player2.stats.fg_pct ? document.querySelector("#fg_pct-1").classList.add("better-stat") : document.querySelector("#fg_pct-2").classList.add("better-stat");
                 player1.stats.fg_pct < player2.stats.fg_pct ? document.querySelector("#fg_pct-1").classList.add("worst-stat") : document.querySelector("#fg_pct-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#fg_pct-1").classList.add("equal-stat");
+                document.querySelector("#fg_pct-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -183,9 +231,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.fg3a !== 'undefined' && player1.stats.fg3a !== null && typeof player2.stats.fg3a !== 'undefined' && player1.stats.fg3a !== null){
             document.querySelector("#three-pa-1").innerHTML=`${player1.stats.fg3a} 3PA`
             document.querySelector("#three-pa-2").innerHTML=`${player2.stats.fg3a} 3PA`
+            document.querySelector("#three-pa-1").classList.remove("equal-stat");
+            document.querySelector("#three-pa-2").classList.remove("equal-stat");
             if (player1.stats.fg3a !== player2.stats.fg3a){
                 player1.stats.fg3a > player2.stats.fg3a ? document.querySelector("#three-pa-1").classList.add("better-stat") : document.querySelector("#three-pa-2").classList.add("better-stat");
                 player1.stats.fg3a < player2.stats.fg3a ? document.querySelector("#three-pa-1").classList.add("worst-stat") : document.querySelector("#three-pa-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#three-pa-1").classList.add("equal-stat");
+                document.querySelector("#three-pa-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -196,9 +250,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.fg3_pct !== 'undefined' && player1.stats.fg3_pct !== null && typeof player2.stats.fg3_pct !== 'undefined' && player1.stats.fg3_pct !== null){
             document.querySelector("#three_pct-1").innerHTML=`${player1.stats.fg3_pct} 3P%`
             document.querySelector("#three_pct-2").innerHTML=`${player2.stats.fg3_pct} 3P%`
+            document.querySelector("#three_pct-1").classList.remove("equal-stat");
+            document.querySelector("#three_pct-2").classList.remove("equal-stat");
             if (player1.stats.fg3_pct !== player2.stats.fg3_pct){
                 player1.stats.fg3_pct > player2.stats.fg3_pct ? document.querySelector("#three_pct-1").classList.add("better-stat") : document.querySelector("#three_pct-2").classList.add("better-stat");
                 player1.stats.fg3_pct < player2.stats.fg3_pct ? document.querySelector("#three_pct-1").classList.add("worst-stat") : document.querySelector("#three_pct-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#three_pct-1").classList.add("equal-stat");
+                document.querySelector("#three_pct-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -209,10 +269,16 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.fta !== 'undefined' && player1.stats.fta !== null && typeof player2.stats.fta !== 'undefined' && player2.stats.fta !== null){
             document.querySelector("#fta-1").innerHTML=`${player1.stats.fta} FTA`
             document.querySelector("#fta-2").innerHTML=`${player2.stats.fta} FTA`
+            document.querySelector("#fta-1").classList.remove("equal-stat");
+            document.querySelector("#fta-2").classList.remove("equal-stat");
             if (player1.stats.fta !== player2.stats.fta){
                 player1.stats.fta > player2.stats.fta ? document.querySelector("#fta-1").classList.add("better-stat") : document.querySelector("#fta-2").classList.add("better-stat");
                 player1.stats.fta < player2.stats.fta ? document.querySelector("#fta-1").classList.add("worst-stat") : document.querySelector("#fta-2").classList.add("worst-stat");
             }    
+            else{
+                document.querySelector("#fta-1").classList.add("equal-stat");
+                document.querySelector("#fta-2").classList.add("equal-stat"); 
+            }
         }
         else{
             document.querySelector("#fta-1").style.border = "0px"
@@ -222,9 +288,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.ft_pct !== 'undefined' && player1.stats.ft_pct !== null && typeof player2.stats.ft_pct !== 'undefined' && player2.stats.ft_pct !== null){
             document.querySelector("#ft_pct-1").innerHTML=`${player1.stats.ft_pct} FT%`
             document.querySelector("#ft_pct-2").innerHTML=`${player2.stats.ft_pct} FT%`
+            document.querySelector("#ft_pct-1").classList.remove("equal-stat");
+            document.querySelector("#ft_pct-2").classList.remove("equal-stat");
             if (player1.stats.ft_pct !== player2.stats.ft_pct){
                 player1.stats.ft_pct > player2.stats.ft_pct ? document.querySelector("#ft_pct-1").classList.add("better-stat") : document.querySelector("#ft_pct-2").classList.add("better-stat");
                 player1.stats.ft_pct < player2.stats.ft_pct ? document.querySelector("#ft_pct-1").classList.add("worst-stat") : document.querySelector("#ft_pct-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#ft_pct-1").classList.add("equal-stat");
+                document.querySelector("#ft_pct-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -235,9 +307,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.pf !== 'undefined' && player1.stats.pf !== null && typeof player2.stats.pf !== 'undefined' && player2.stats.pf !== null){
             document.querySelector("#fouls-1").innerHTML=`${player1.stats.pf} FOULS`
             document.querySelector("#fouls-2").innerHTML=`${player2.stats.pf} FOULS`
+            document.querySelector("#fouls-1").classList.remove("equal-stat");
+            document.querySelector("#fouls-2").classList.remove("equal-stat");
             if (player1.stats.pf !== player2.stats.pf){
                 player1.stats.pf < player2.stats.pf ? document.querySelector("#fouls-1").classList.add("better-stat") : document.querySelector("#fouls-2").classList.add("better-stat");
                 player1.stats.pf > player2.stats.pf ? document.querySelector("#fouls-1").classList.add("worst-stat") : document.querySelector("#fouls-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#fouls-1").classList.add("equal-stat");
+                document.querySelector("#fouls-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -248,9 +326,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.games_played !== 'undefined' && player1.stats.games_played !== null && typeof player2.stats.games_played !== 'undefined' && player2.stats.games_played !== null){
             document.querySelector("#games-1").innerHTML=`${player1.stats.games_played} GAMES`
             document.querySelector("#games-2").innerHTML=`${player2.stats.games_played} GAMES`
+            document.querySelector("#games-1").classList.remove("equal-stat");
+            document.querySelector("#games-2").classList.remove("equal-stat");
             if (player1.stats.games_played !== player2.stats.games_played){
                 player1.stats.games_played > player2.stats.games_played ? document.querySelector("#games-1").classList.add("better-stat") : document.querySelector("#games-2").classList.add("better-stat");
                 player1.stats.games_played < player2.stats.games_played ? document.querySelector("#games-1").classList.add("worst-stat") : document.querySelector("#games-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#games-1").classList.add("equal-stat");
+                document.querySelector("#games-2").classList.add("equal-stat"); 
             }
         }
         else{
@@ -261,9 +345,15 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         if (typeof player1.stats.min !== 'undefined' && player1.stats.min !== null && typeof player2.stats.min !== 'undefined' && player2.stats.min !== null){
             document.querySelector("#min-1").innerHTML=`${player1.stats.min} MIN`
             document.querySelector("#min-2").innerHTML=`${player2.stats.min} MIN`
+            document.querySelector("#min-1").classList.remove("equal-stat");
+            document.querySelector("#min-2").classList.remove("equal-stat");
             if (player1.stats.min !== player2.stats.min){
                 player1.stats.min > player2.stats.min ? document.querySelector("#min-1").classList.add("better-stat") : document.querySelector("#min-2").classList.add("better-stat");
                 player1.stats.min < player2.stats.min ? document.querySelector("#min-1").classList.add("worst-stat") : document.querySelector("#min-2").classList.add("worst-stat");
+            }
+            else{
+                document.querySelector("#min-1").classList.add("equal-stat");
+                document.querySelector("#min-2").classList.add("equal-stat"); 
             }
         }
         else{
