@@ -161,7 +161,7 @@ const SearchbarDropdown = (props) => {
             })}
           </ul>
         </div>
-        <input type="text" placeholder = "2021-2022" id = "season-1"/>
+        <input type="text" placeholder = "YYYY" id = "season-1"/>
       </div>
 
       {/* Second one */}
@@ -193,7 +193,7 @@ const SearchbarDropdown = (props) => {
             })}
           </ul>
         </div>
-        <input type="text" placeholder = "2021-2022" id = "season-2"/>
+        <input type="text" placeholder = "YYYY" id = "season-2"/>
       </div>
     </>
   );
@@ -308,7 +308,7 @@ function Home() {
   return (
     <div className="container">
       <div id="message">
-          <p>Enter two players and seasons they played in to compare their stats. Most player data from 1982 to the current season is available, but current season data may be inaccurate.</p>
+          <p>Enter two players and seasons to compare their stats. Most player data after 1980 is available, but current season (2022) data may be inaccurate.</p>
       </div>
       <SearchbarDropdown options1={options1} options2={options2} onInputChange={onInputChange} />
       <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2}/>

@@ -6,7 +6,7 @@ const Layout = () => {
       <header>
         <Link to="/">
           <div className="webname">
-            <img src={require('../images/logo2.png')} alt="hi" id="nba-logo" />
+            <img src={require('../images/logo.png')} alt="NBA" id="nba-logo" />
             <div className="title">
                 <span className="blue-highlight">Head</span>
                 <span className="black-highlight">-</span>

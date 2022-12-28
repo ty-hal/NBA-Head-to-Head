@@ -113,37 +113,40 @@ header nav{
   overflow:hidden;
 }
 
-#season-1, #season-2, #search-button{
-  display: inline-block;
+#season-1, #season-2, #search-button, #search-bar-1, #search-bar-2{
   padding: 5px;
   background: #e7e7e7;
   border: 2px black solid;
   font-size: 16px;
   border-radius: 10px;
   margin: 0 10px;  
-  width: 80px;
   font-weight: normal;
 }
 
-#search-button{
-  color: black;
+#season-1, #season-2{
+  width: 40px;
+  text-align: center;
+  margin-left: 15px;
 }
+
+#season-1::placeholder, #season-2::placeholder{
+  font-size: 15px;
+}
+
+#search-bar-1, #search-bar-2 {
+  margin: 0 10px;  
+}
+
+
+
+
+
 
 .search-bar-dropdown {
   display: inline-block;
   width: 200px;
   font-size: 20px;  
   margin: 0 10px 5px 0;
-}
-
-#search-bar-1, #search-bar-2 {
-  width: 100%;
-  padding: 5px;
-  background: #e7e7e7;
-  border: 2px black solid;
-  font-size: 16px;
-  border-radius: 10px;
-  margin-top: 10x;
 }
 
 #results-1, #results-2 {
@@ -231,7 +234,11 @@ header nav{
   width: 50%;
   text-align: right;
 }
-
+#player-1-stats-name, #player-2-stats-name{
+  height: 1.5em;
+  line-height: 1.5em;
+  overflow: hidden
+}
 #player-2-stats{
   width:50%;
   margin-left: 20px;
@@ -311,8 +318,9 @@ header nav{
 
 }
 
-
+/* SMALL SIZED WINDOW */
 @media screen and (max-width: 570px) {
+  /* Hide head to head */
   .webname{
     width: 70px;
     height: 70px;
@@ -322,8 +330,10 @@ header nav{
     visibility: hidden;
   }
 }
-/* SMALL SIZED WINDOW (MINIMIZED OR PHONE)*/
+
+/* MEDIUM SIZED WINDOW (MINIMIZED OR PHONE)*/
 @media screen and (max-width: 1170px) {
+  /* Hide player headshots */
   .player-stats img{
     width: 0px;
     height: 0px;
