@@ -4,6 +4,10 @@ import playerNames from '../data/player_names.txt';
 
 let headshotData = [] // Object of the form (player ID : URL) for most NBA players
 let NBAplayers = [] // NBA player names from txt file
+let carriage = []
+let both = []
+let newline = []
+
 
 async function getHeadshotData(){
     try{
@@ -29,6 +33,9 @@ async function getNBAPlayers(){
 }
 getNBAPlayers().then(function(response){
   NBAplayers = response;
+  carriage = response.split("\r")
+  newline = response.split("\n")
+  both = response.split("\r\n")
     // NBAplayers = response.split("\r\n") // Save the txt data into NBAplayers array
 })
 
@@ -300,8 +307,10 @@ function Home() {
     player1.name = newPlayer1;
     player2.name = newPlayer2;
 
-
-    console.log(NBAplayers)
+    console.log("Players", NBAplayers)
+    console.log("Carriage", carriage)
+    console.log("New Line", newline)
+    console.log("Both", both)
   }
 
   return (
