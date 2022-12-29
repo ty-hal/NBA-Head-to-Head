@@ -117,7 +117,11 @@ const SearchbarDropdown = (props) => {
 
     });
     document.addEventListener('click', (event) => {
+    try {
       ulRef1.current.style.display = 'none';
+    } catch (error) {
+      //Null property for display
+    }
     });
   }, [onInputChange]);
   useEffect(() => {
@@ -129,7 +133,11 @@ const SearchbarDropdown = (props) => {
       onInputChange(event);
     });
     document.addEventListener('click', (event) => {
-      ulRef2.current.style.display = 'none';
+      try {
+        ulRef2.current.style.display = 'none';
+      } catch (error) {
+        //Null property for display
+      }
     });
   }, [onInputChange]);
   return (

@@ -90,7 +90,9 @@ Alec Kessler
 Alec Peters
 Aleem Ford
 Aleksandar Djordjevic
+Aleksandar Radojevic
 Aleksej Pokusevski
+Alen Smailagic
 Alex Acker
 Alex Blackwell
 Alex Bradley
@@ -108,6 +110,7 @@ Alex Stivrins
 Alexander Johnson
 Alexander Volkov
 Alexey Shved
+Alexis Ajinca
 Alfonzo McKinnie
 Alfred McGuire
 Alfredrick Hughes
@@ -125,6 +128,7 @@ Alondes Williams
 Alonzo Bradley
 Alonzo Gee
 Alonzo Mourning
+Alperen Sengun
 Alphonso Ford
 Alton Ford
 Alton Lister
@@ -141,6 +145,7 @@ Amida Brimah
 Amile Jefferson
 Amir Coffey
 Amir Johnson
+Anderson Varejao
 Andrae Patterson
 Andray Blatche
 Andre Barrett
@@ -174,6 +179,7 @@ Andrew Nicholson
 Andrew Toney
 Andrew White
 Andrew Wiggins
+Andris Biedrins
 Andres Guibert
 Andres Nocioni
 Andy Anderson
@@ -193,6 +199,7 @@ Angelo Musi
 Ansley Truitt
 Ansu Sesay
 Antawn Jamison
+Ante Zizic
 Anthony Avent
 Anthony Bennett
 Anthony Bonner
@@ -235,6 +242,7 @@ Antonio Lang
 Antonio McDyess
 Antonis Fotsis
 Antonius Cleveland
+Anzejs Pasecniks
 Archie Clark
 Archie Dees
 Archie Goodwin
@@ -516,6 +524,7 @@ Bob Williams
 Bob Wilson
 Bob Wood
 Bob Woollard
+Boban Marjanovic
 Bobby Brown
 Bobby Cattage
 Bobby Cook
@@ -539,6 +548,8 @@ Bobby Washington
 Bobby Watson
 Bobby Wilson
 Bobby Wilson
+Bogdan Bogdanovic
+Bojan Bogdanovic
 Bol Bol
 Bones Hyland
 Bones McKinney
@@ -566,6 +577,7 @@ Branden Dawson
 Brandin Knight
 Brandon Armstrong
 Brandon Bass
+Brandon Boston Jr.
 Brandon Clarke
 Brandon Davies
 Brandon Goodwin
@@ -626,6 +638,7 @@ Bruce Seals
 Bruce Spraggins
 Bruno Caboclo
 Bruno Fernando
+Bruno Sundov
 Bryan Warrick
 Bryant Reeves
 Bryant Stith
@@ -749,6 +762,7 @@ Cedric Lewis
 Cedric Maxwell
 Cedric Simmons
 Cedrick Hordges
+Cezary Trybanski
 Chad Gallagher
 Chad Kinch
 Chandler Hutchison
@@ -781,6 +795,7 @@ Charley Shipp
 Charlie Beasley
 Charlie Bell
 Charlie Black
+Charlie Brown Jr.
 Charlie Criss
 Charlie Davis
 Charlie Hardnett
@@ -799,6 +814,7 @@ Charlie Yelverton
 Chase Budinger
 Chasson Randle
 Chauncey Billups
+Chaundee Brown Jr.
 Cheese Johnson
 Cheick Diallo
 Cheikh Samb
@@ -996,6 +1012,7 @@ Craig Shelton
 Craig Smith
 Craig Spitzer
 Craig Sword
+Cristiano Felicio
 Cuonzo Martin
 Curly Armstrong
 Curtis Borchardt
@@ -1016,6 +1033,7 @@ DaJuan Summers
 DaQuan Jeffries
 Daequan Cook
 Dahntay Jones
+Dairis Bertans
 Daishen Nix
 Dajuan Wagner
 Dakari Johnson
@@ -1027,6 +1045,7 @@ Dale Hamilton
 Dale Schlueter
 Dale Wilkinson
 Dalen Terry
+Dalibor Bagaric
 Dallas Comegys
 Dallas Thornton
 Damian Jones
@@ -1036,6 +1055,7 @@ Damien Wilkins
 Damion James
 Damion Lee
 Damir Markota
+Damjan Rudez
 Damon Jones
 Damon Stoudamire
 Damone Brown
@@ -1084,8 +1104,10 @@ Danny Wagner
 Danny Young
 Dante Cunningham
 Dante Exum
+Danuel House Jr.
 Darel Carrier
 Darington Hobson
+Dario Saric
 Darius Bazley
 Darius Garland
 Darius Johnson-Odom
@@ -1094,6 +1116,7 @@ Darius Miller
 Darius Morris
 Darius Songaila
 Darius Washington
+Darko Milicic
 Darnell Hillman
 Darnell Jackson
 Darnell Mee
@@ -1159,6 +1182,7 @@ David Benoit
 David Burns
 David Bustion
 David Cooke
+David Duke Jr.
 David Harrison
 David Johnson
 David Lee
@@ -1238,7 +1262,9 @@ Dennis Horner
 Dennis Johnson
 Dennis Nutt
 Dennis Rodman
+Dennis Schroder
 Dennis Scott
+Dennis Smith Jr.
 Dennis Stewart
 Dennis Van Zant
 Dennis Wuycik
@@ -1265,6 +1291,7 @@ Derrick Coleman
 Derrick Dial
 Derrick Favors
 Derrick Gervin
+Derrick Jones Jr.
 Derrick McKey
 Derrick Phelps
 Derrick Rose
@@ -1402,6 +1429,7 @@ Donald Hodge
 Donald Royal
 Donald Sloan
 Donald Whiteside
+Donatas Motiejunas
 Donell Taylor
 Donnell Harvey
 Donnie Boyce
@@ -1439,7 +1467,9 @@ Doug Smith
 Doug West
 Doyle Parrack
 Dragan Bender
+Dragan Tarlac
 Draymond Green
+Drazen Petrovic
 Drew Barry
 Drew Eubanks
 Drew Gooden
@@ -1450,6 +1480,7 @@ Duane Cooper
 Duane Ferrell
 Duane Klueh
 Duane Washington
+Duane Washington Jr.
 Duck Williams
 Dudley Bradley
 Duje Dukan
@@ -1474,6 +1505,7 @@ Dwyane Wade
 Dylan Windler
 Dyron Nix
 Dyson Daniels
+Davis Bertans
 Dzanan Musa
 E'Twaun Moore
 E.C. Coleman
@@ -1547,6 +1579,7 @@ Edgar Jones
 Edgar Lacey
 Edmond Sumner
 Edmund Lawrence
+Eduardo Najera
 Edwin Ubiles
 Edy Tavares
 Efthimios Rentzias
@@ -1618,6 +1651,7 @@ Ernie DiGregorio
 Ernie Grunfeld
 Ernie Vandeweghe
 Errol Palmer
+Ersan Ilyasova
 Erv Staggs
 Ervin Inniger
 Ervin Johnson
@@ -1640,8 +1674,10 @@ Fabricio Oberto
 Facundo Campazzo
 Fat Lever
 Fatty Taylor
+Felipe Lopez
 Felton Spencer
 Fennis Dembo
+Fernando Martin
 Feron Hunt
 Festus Ezeli
 Floyd Theard
@@ -1654,6 +1690,7 @@ Forrest McKenzie
 Fran Curran
 Fran O'Hanlon
 Francisco Elson
+Francisco Garcia
 Frank Brickowski
 Frank Card
 Frank Fucarino
@@ -1753,6 +1790,7 @@ Gary Phillips
 Gary Plummer
 Gary Suiter
 Gary Trent
+Gary Trent Jr.
 Gary Turner
 Gary Voce
 Gary Zeller
@@ -1827,6 +1865,7 @@ George Tinsley
 George Trapp
 George Wilson
 George Yardley
+George Zidek
 Georges Niang
 Georgi Glouchkov
 Georgios Kalaitzakis
@@ -1845,6 +1884,7 @@ Gerald Wilkins
 Gerard King
 Gerry Calabrese
 Gerry Ward
+Gheorghe Muresan
 Gian Clavell
 Giannis Antetokounmpo
 Giff Roux
@@ -1856,6 +1896,7 @@ Glen Combs
 Glen Davis
 Glen Gondrezick
 Glen Rice
+Glen Rice Jr.
 Glen Selbo
 Glenn Hagan
 Glenn Hansen
@@ -1868,6 +1909,8 @@ God Shammgod
 Goga Bitadze
 Goo Kennedy
 Goose Ligon
+Goran Dragic
+Gordan Giricek
 Gordon Hayward
 Gorgui Dieng
 Gorham Getchell
@@ -1913,11 +1956,15 @@ Greg Stokes
 Greg Sutton
 Greg Whittington
 Greg Wittman
+Greivis Vasquez
 Guerschon Yabusele
+Guillermo Diaz
+Gundars Vetra
 Gus Bailey
 Gus Gerard
 Gus Johnson
 Gus Williams
+Gustavo Ayon
 Guy Manning
 Guy Morgan
 Guy Rodgers
@@ -1946,6 +1993,7 @@ Hank McDowell
 Hank Rosenstein
 Hank Whitney
 Hank Williams
+Hanno Mottola
 Happy Hairston
 Harold Brown
 Harold Ellis
@@ -1979,6 +2027,7 @@ Hassani Gravett
 Hawkeye Whitney
 Haywood Highsmith
 Haywoode Workman
+Hedo Turkoglu
 Henry Akin
 Henry Bacon
 Henry Bibby
@@ -2043,6 +2092,7 @@ Ian Lockhart
 Ian Mahinmi
 Ibo Kutluay
 Ignas Brazdeikis
+Igor Rakocevic
 Ike Anigbogu
 Ike Borsavage
 Ike Diogu
@@ -2112,6 +2162,7 @@ Jabari Bird
 Jabari Brown
 Jabari Parker
 Jabari Smith
+Jabari Smith Jr.
 Jabari Walker
 Jack Burmaster
 Jack Coleman
@@ -2247,6 +2298,7 @@ Jamie Watson
 Jamil Wilson
 Jamison Brewer
 Jamorko Pickett
+Jan Vesely
 Jan van Breda Kolff
 Jannero Pargo
 Jared Butler
@@ -2260,6 +2312,7 @@ Jared Terrell
 Jarell Eddie
 Jarell Martin
 Jaren Jackson
+Jaren Jackson Jr.
 Jarnell Stokes
 Jaron Blossomgame
 Jarred Vanderbilt
@@ -2701,6 +2754,7 @@ Jon Sundvold
 Jon Teske
 Jonah Bolden
 Jonas Jerebko
+Jonas Valanciunas
 Jonathan Bender
 Jonathan Gibson
 Jonathan Isaac
@@ -2729,6 +2783,7 @@ Jordan Schakel
 Jordan Sibert
 Jordan Williams
 Jorge Garbajosa
+Jorge Gutierrez
 Jose Alvarado
 Jose Slaughter
 Joseph Forte
@@ -2757,12 +2812,14 @@ Josh Richardson
 Josh Selby
 Josh Smith
 Joshua Primo
+Jose Calderon
 Jose Ortiz
 Joao Vianna
 Jrue Holiday
 Juan Carlos Navarro
 Juan Dixon
 Juan Toscano-Anderson
+Juancho Hernangomez
 Juaquin Hawkins
 Jud Buechler
 Julian Champagnie
@@ -2794,8 +2851,10 @@ Justin Williams
 Justin Wright-Foreman
 Justise Winslow
 Justus Thigpen
+Jusuf Nurkic
 Juwan Howard
 Juwan Morgan
+Jerome Moiso
 K.C. Jones
 K.J. McDaniels
 KZ Okpala
@@ -2806,6 +2865,7 @@ Kaniel Dickens
 Kannard Johnson
 Kareem Abdul-Jabbar
 Kareem Rush
+Karim Mane
 Karl Malone
 Karl-Anthony Towns
 Kasib Powell
@@ -2843,6 +2903,7 @@ Kelenna Azubuike
 Keljin Blevins
 Kelly McCarty
 Kelly Olynyk
+Kelly Oubre Jr.
 Kelly Tripucka
 Kelvin Cato
 Kelvin Ransey
@@ -2877,6 +2938,7 @@ Kendrick Perkins
 Kennard Winchester
 Kennedy Chandler
 Kenneth Faried
+Kenneth Lofton Jr.
 Kenny Anderson
 Kenny Battle
 Kenny Carr
@@ -2902,6 +2964,7 @@ Kent Benson
 Kentavious Caldwell-Pope
 Kenton Edelin
 Kenyon Martin
+Kenyon Martin Jr.
 Keon Clark
 Keon Ellis
 Keon Johnson
@@ -2936,10 +2999,12 @@ Kevin O'Shea
 Kevin Ollie
 Kevin Pangos
 Kevin Porter
+Kevin Porter Jr.
 Kevin Pritchard
 Kevin Restani
 Kevin Salvadori
 Kevin Stacom
+Kevin Seraphin
 Kevin Thompson
 Kevin Williams
 Kevin Willis
@@ -2958,6 +3023,7 @@ Killian Tillie
 Kim Anderson
 Kim English
 Kim Hughes
+Kira Lewis Jr.
 Kirk Haston
 Kirk Hinrich
 Kirk Penney
@@ -2968,12 +3034,15 @@ Kleggie Hermsen
 Kobe Bryant
 Kobi Simmons
 Korleone Young
+Kornel David
 Kosta Koufos
+Kosta Perovic
 Kostas Antetokounmpo
 Kostas Papanikolaou
 Kris Dunn
 Kris Humphries
 Kris Joseph
+Kristaps Porzingis
 Kurk Lee
 Kurt Nimphius
 Kurt Rambis
@@ -3046,6 +3115,7 @@ Larry Miller
 Larry Moffett
 Larry Moore
 Larry Nance
+Larry Nance Jr.
 Larry Owens
 Larry Robinson
 Larry Sanders
@@ -3176,7 +3246,9 @@ Luguentz Dort
 Luis Flores
 Luis Montero
 Luis Scola
+Luka Doncic
 Luka Garza
+Luka Samanic
 Luke Babbitt
 Luke Harangody
 Luke Jackson
@@ -3234,6 +3306,7 @@ Mamadou N'Diaye
 Mangok Mathiang
 Manny Harris
 Manny Leaks
+Manu Ginobili
 Manute Bol
 MarJon Beauchamp
 MarShon Brooks
@@ -3305,6 +3378,8 @@ Markel Brown
 Markelle Fultz
 Markieff Morris
 Marko Guduric
+Marko Jaric
+Marko Milic
 Marko Simonovic
 Markus Howard
 Marlon Garnett
@@ -3322,10 +3397,12 @@ Marshall Plumlee
 Marshall Rogers
 Martell Webster
 Martin Lewis
+Martin Muursepp
 Martin Nessley
 Marty Byrnes
 Marty Conlon
 Marty Passaglia
+Martynas Andriuskevicius
 Marv Roberts
 Marv Schatzman
 Marv Winkler
@@ -3425,6 +3502,7 @@ Michael Curry
 Michael Dickerson
 Michael Doleac
 Michael Finley
+Michael Foster Jr.
 Michael Frazier
 Michael Gbinije
 Michael Hawkins
@@ -3435,6 +3513,7 @@ Michael Kidd-Gilchrist
 Michael McDonald
 Michael Olowokandi
 Michael Phelps
+Michael Porter Jr.
 Michael Redd
 Michael Ruffin
 Michael Smith
@@ -3446,6 +3525,7 @@ Michael Young
 Micheal Ray Richardson
 Micheal Williams
 Mickael Gelabale
+Mickael Pietrus
 Mickell Gladness
 Mickey Davis
 Mickey Dillard
@@ -3523,11 +3603,14 @@ Mike Wilks
 Mike Williams
 Mike Woodson
 Mikki Moore
+Mile Ilic
 Miles Bridges
 Miles McBride
 Miles Plumlee
 Miles Simon
 Milo Komenich
+Milos Babic
+Milos Teodosic
 Milt Palacio
 Milt Schoon
 Milt Wagner
@@ -3535,6 +3618,8 @@ Milt Williams
 Milton Doyle
 Mindaugas Kuzminskas
 Miroslav Raduljica
+Mirsad Turkcan
+Mirza Teletovic
 Mitch Creek
 Mitch Kupchak
 Mitch McGary
@@ -3569,6 +3654,7 @@ Moses Malone
 Moses Moody
 Moses Wright
 Mouhamed Sene
+Moussa Diabate
 Muggsy Bogues
 Murray Mitchell
 Murray Wier
@@ -3618,6 +3704,8 @@ Neil Johnson
 Neil Johnston
 Nelson Bobb
 Nemanja Bjelica
+Nemanja Nedovic
+Nenad Krstic
 Nerlens Noel
 Nic Claxton
 Nick Anderson
@@ -3637,11 +3725,17 @@ Nickeil Alexander-Walker
 Nico Mannion
 Nicolas Batum
 Nicolas Brussino
+Nicolas Laprovittola
 Nicolo Melli
 Nigel Hayes
 Nigel Williams-Goss
 Nik Stauskas
 Nikita Wilson
+Nikola Jokic
+Nikola Jovic
+Nikola Mirotic
+Nikola Pekovic
+Nikola Vucevic
 Nikoloz Tskitishvili
 Noah Vonleh
 Noble Jorgensen
@@ -3670,6 +3764,7 @@ Obinna Ekezie
 Ochai Agbaji
 Odie Spears
 Odis Allison
+Ognjen Kuzmic
 Okaro White
 Olden Polynice
 Oleksiy Pecherov
@@ -3706,6 +3801,7 @@ Otis Howard
 Otis Smith
 Otis Thorpe
 Otto Moore
+Otto Porter Jr.
 Otto Schnellbacher
 Ousmane Dieng
 Owen Wells
@@ -3732,6 +3828,7 @@ Pat Garrity
 Pat McFarland
 Pat Riley
 Patricio Garino
+Patrick Baldwin Jr.
 Patrick Beverley
 Patrick Christopher
 Patrick Eddie
@@ -3781,8 +3878,11 @@ Paul Zipser
 Pavel Podkolzin
 Payton Pritchard
 Pearl Washington
+Peja Stojakovic
 Penny Early
 Pep Saul
+Pepe Sanchez
+Pero Antic
 Perry Jones
 Perry Moss
 Perry Warbington
@@ -3834,11 +3934,13 @@ Pops Mensah-Bonsu
 Porter Meriwether
 Precious Achiuwa
 Predrag Drobnjak
+Predrag Savovic
 Press Maravich
 Price Brookfield
 Priest Lauderdale
 Primoz Brezec
 Purvis Short
+Petur Gudmundsson
 Quentin Grimes
 Quentin Richardson
 Quincy Acy
@@ -3856,8 +3958,11 @@ R.B. Lynam
 R.J. Hampton
 R.J. Hunter
 RJ Barrett
+RJ Nembhard Jr.
+Radisav Curcic
 Raef LaFrentz
 Rafael Addison
+Rafael Araujo
 Rafer Alston
 Raja Bell
 Rajon Rondo
@@ -3900,6 +4005,8 @@ Rashad McCants
 Rashad Vaughn
 Rashard Lewis
 Rasheed Wallace
+Rasho Nesterovic
+Rastko Cvetkovic
 Rasual Butler
 Ratko Varda
 Raul Neto
@@ -3927,6 +4034,7 @@ Rayjon Tucker
 Raymond Brown
 Raymond Felton
 Raymond Townsend
+Raul Lopez
 Red Davis
 Red Dehnert
 Red Holzman
@@ -3984,6 +4092,7 @@ Richard Dumas
 Richard Hamilton
 Richard Jefferson
 Richard Morton
+Richard Petruska
 Richard Rellford
 Richard Washington
 Richaun Holmes
@@ -4080,6 +4189,7 @@ Roger Phegley
 Roger Powell
 Roger Schurig
 Roger Strickland
+Roko Ukic
 Roland West
 Rolando Blackman
 Rolando Ferreira
@@ -4102,6 +4212,7 @@ Ron Filipek
 Ron Franz
 Ron Grandison
 Ron Harper
+Ron Harper Jr.
 Ron Horn
 Ron Johnson
 Ron King
@@ -4157,7 +4268,9 @@ Ruben Boumtje-Boumtje
 Ruben Nembhard
 Ruben Patterson
 Rubin Russell
+Ruben Garces
 Ruben Wolkowyski
+Rudy Fernandez
 Rudy Gay
 Rudy Gobert
 Rudy Hackett
@@ -4222,7 +4335,10 @@ Sammy Little
 Samuel Dalembert
 Sandro Mamukelashvili
 Santi Aldama
+Sasha Danilovic
 Sasha Kaun
+Sasha Pavlovic
+Sasha Vujacic
 Saul Mariaschin
 Scooter McCray
 Scot Pollard
@@ -4246,6 +4362,7 @@ Scottie Barnes
 Scottie Lewis
 Scottie Pippen
 Scotty Hopson
+Scotty Pippen Jr.
 Sean Colson
 Sean Elliott
 Sean Green
@@ -4269,6 +4386,7 @@ Serge Ibaka
 Sergei Bazarevich
 Sergei Monia
 Sergey Karasev
+Sergio Rodriguez
 Seth Curry
 Shabazz Muhammad
 Shabazz Napier
@@ -4322,6 +4440,7 @@ Sim Bhullar
 Simmie Hill
 Simone Fontecchio
 Sindarius Thornwell
+Skal Labissiere
 Skeeter Henry
 Skeeter Swift
 Skip Harlicka
@@ -4330,6 +4449,7 @@ Skip Wise
 Skippy Whitaker
 Skylar Mays
 Slater Martin
+Slavko Vranes
 Sleepy Floyd
 Slick Leonard
 Slick Watts
@@ -4423,6 +4543,7 @@ Steven Smith
 Stevin Smith
 Stew Johnson
 Stewart Granger
+Stojko Vrankovic
 Stromile Swift
 Stu Lantz
 Stuart Gray
@@ -4510,6 +4631,7 @@ Thon Maker
 Thurl Bailey
 Theo Maledon
 Tiago Splitter
+Tibor Pleiss
 Ticky Burden
 Tierre Brown
 Tim Bassett
@@ -4517,6 +4639,7 @@ Tim Breaux
 Tim Duncan
 Tim Frazier
 Tim Hardaway
+Tim Hardaway Jr.
 Tim James
 Tim Kempton
 Tim Legler
@@ -4595,7 +4718,9 @@ Tommy Kearns
 Tommy Kron
 Tommy O'Keefe
 Tommy Woods
+Tomas Satoransky
 Toney Douglas
+Toni Kukoc
 Tony Allen
 Tony Battie
 Tony Bennett
@@ -4679,6 +4804,7 @@ Trey Thompkins
 Tristan Thompson
 Trooper Washington
 Troy Bell
+Troy Brown Jr.
 Troy Caupain
 Troy Daniels
 Troy Hudson
@@ -4688,6 +4814,7 @@ Truck Robinson
 Ty Jerome
 Ty Lawson
 Ty-Shon Alexander
+TyTy Washington Jr.
 Tyler Bey
 Tyler Cavanaugh
 Tyler Cook
@@ -4731,6 +4858,7 @@ Vern Fleming
 Vern Gardner
 Vern Hatton
 Vern Mikkelsen
+Vernon Carey Jr.
 Vernon Macklin
 Vernon Maxwell
 Vester Marshall
@@ -4747,6 +4875,7 @@ Vince Carter
 Vince Edwards
 Vince Hunter
 Vince Taylor
+Vince Williams Jr.
 Vincent Askew
 Vincent Poirier
 Vincent Yarbrough
@@ -4757,7 +4886,9 @@ Virgil Vaughn
 Vit Krejci
 Vitaly Potapenko
 Vlade Divac
+Vladimir Radmanovic
 Vladimir Stepania
+Vlatko Cancar
 Voise Winters
 Von Wafer
 Vonteego Cummings
@@ -4785,6 +4916,7 @@ Walt Gilmore
 Walt Hazzard
 Walt Kirk
 Walt Lautenbach
+Walt Lemon Jr.
 Walt Miller
 Walt Piatkowski
 Walt Simon
@@ -4829,7 +4961,9 @@ Wayne Simien
 Wayne Stevens
 Wayne Turner
 Wayne Yates
+Wendell Carter Jr.
 Wendell Ladner
+Wendell Moore Jr.
 Wenyen Gabriel
 Wes Bialosuknia
 Wes Iwundu
@@ -4891,6 +5025,7 @@ Willie Wise
 Willie Worsley
 Willis Reed
 Willis Thomas
+Willy Hernangomez
 Wilson Chandler
 Wilson Washington
 Wilt Chamberlain
@@ -4911,6 +5046,7 @@ Xavier Munford
 Xavier Rathan-Mayes
 Xavier Silas
 Xavier Sneed
+Xavier Tillman Sr.
 Yakhouba Diawara
 Yante Maten
 Yao Ming
@@ -4941,10 +5077,18 @@ Zhaire Smith
 Zhou Qi
 Ziaire Williams
 Zion Williamson
+Zoran Dragic
+Zoran Planinic
 Zydrunas Ilgauskas
 Zylan Cheatham
 Alex Abrines
 Angel Delgado
 Oscar Torres
+Omer Asik
+Sarunas Jasikevicius
+Sarunas Marciulionis
 Zan Tabak
 Zarko Paspalj
+Zarko Cabarkapa
+Zeljko Rebraca
+Nene

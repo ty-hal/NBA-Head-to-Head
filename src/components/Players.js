@@ -62,9 +62,11 @@ const Players = ({player1, player2, btnClick, findStats}) => {
         // If either of the players stats are NULL (missing)
         if (typeof player1.stats === 'undefined' || player1.stats === null){
             document.querySelector("#search-error").innerHTML=`${player1.name} did not play in the ${document.querySelector("#season-1").value}-${parseInt(document.querySelector("#season-1").value)+1} season or his stats are unavailable.`;
+            throw new Error("Missing Stats");
         }
-        if (typeof player2.stats === 'undefined' || player2.stats === null){
+        else if (typeof player2.stats === 'undefined' || player2.stats === null){
             document.querySelector("#search-error").innerHTML=`${player2.name} did not play in the ${document.querySelector("#season-2").value}-${parseInt(document.querySelector("#season-2").value)+1} season or his stats are unavailable.`;
+            throw new Error("Missing Stats");
         }
 
         // Update the headshots src URLs and make them visible

@@ -25,8 +25,8 @@ body {
 /* LAYOUT PAGE */
 nav ul li a{ 
   text-transform: none;
-  font-variant: small-caps;
-  font-size: 20px;
+  font: small-caps 800 20px 'Arial Narrow Bold', 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
 }
 
 header{
@@ -51,7 +51,7 @@ header{
   height: 60px;
   text-transform: none;
   font: 800 40px "Nunito",sans-serif;
-  -webkit-text-stroke: 0.4px white;
+  -webkit-text-stroke: 0.5px white;
 }
 
 .blue-highlight{
