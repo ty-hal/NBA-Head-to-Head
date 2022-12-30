@@ -151,6 +151,7 @@ const SearchbarDropdown = (props) => {
             placeholder="Player 1"
             ref={inputRef1}
             onChange={onInputChange}
+            autocomplete="off"
           />
           <ul id="results-1" className="list-group" ref={ulRef1}>
             {options1.map((option, index) => {
@@ -168,7 +169,7 @@ const SearchbarDropdown = (props) => {
             })}
           </ul>
         </div>
-        <input type="text" placeholder = "YYYY" id = "season-1"/>
+        <input type="text" placeholder = "YYYY" id = "season-1" autocomplete="off"/>
       </div>
       <div className="player-dropdowns">
         <div className="search-bar-dropdown">
@@ -179,6 +180,7 @@ const SearchbarDropdown = (props) => {
             placeholder="Player 2"
             ref={inputRef2}
             onChange={onInputChange}
+            autocomplete="off"
           />
           <ul id="results-2" className="list-group" ref={ulRef2}>
             {options2.map((option, index) => {
@@ -196,7 +198,7 @@ const SearchbarDropdown = (props) => {
             })}
           </ul>
         </div>
-        <input type="text" placeholder = "YYYY" id = "season-2"/>
+        <input type="text" placeholder = "YYYY" id = "season-2" autocomplete = "off"/>
       </div>
     </>
   );
@@ -311,7 +313,17 @@ function Home() {
   return (
     <div className="container">
       <div id="message">
-          <p>Enter two players and seasons to compare their stats. Most player data after 1980 is available, but current season (2022) data may be inaccurate.</p>
+          <p>
+            Enter two players and seasons to compare their season stats. 
+            <span class="material-symbols-outlined" style={{verticalAlign: 'middle', color: 'black'}}>
+              help
+              <div id="help-content">
+                <p>
+                  Most player data after the 1980 season is available. Current season data (2022) may be inaccurate.
+                </p>
+              </div>
+            </span>
+          </p>
       </div>
       <SearchbarDropdown options1={options1} options2={options2} onInputChange={onInputChange} />
       <Players btnClick={editPlayers} findStats={getStats} player1={player1} player2={player2}/>

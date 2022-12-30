@@ -17,13 +17,13 @@ const Players = ({player1, player2, btnClick, findStats}) => {
 
         // Check if valid players are inputted
         if (!document.querySelector("#search-bar-1").value || !document.querySelector("#search-bar-2").value){
-            document.querySelector("#search-error").innerHTML="Enter valid player(s).";
+            document.querySelector("#search-error").innerHTML=`<f class="material-symbols-outlined" style="vertical-align: middle; color: rgba(214, 58, 58, 0.827);">error</f> Enter valid player(s).`;
             return;
         }
 
         // Check if valid seasons are inputted
-        if (parseInt(document.querySelector("#season-1").value.substring(0,4)) > 2022 || parseInt(document.querySelector("#season-2").value.substring(0,4)) > 2022){
-            document.querySelector("#search-error").innerHTML="Enter valid season(s).";
+        if (parseInt(document.querySelector("#season-1").value.substring(0,4)) > 2022 || parseInt(document.querySelector("#season-1").value.substring(0,4)) < 1970 || parseInt(document.querySelector("#season-2").value.substring(0,4)) > 2022 || parseInt(document.querySelector("#season-2").value.substring(0,4)) < 1970){
+            document.querySelector("#search-error").innerHTML=`<span class="material-symbols-outlined" style="vertical-align: middle; color: rgba(214, 58, 58, 0.827);">error</span> Enter valid season(s).`;
             return;
         }
 
@@ -40,9 +40,9 @@ const Players = ({player1, player2, btnClick, findStats}) => {
                 document.querySelector(stat).innerHTML=""
                 document.querySelector(stat).style.border = "0px"
             });
-            if (document.querySelector("#search-error").innerHTML === ""){
-                document.querySelector("#search-error").innerHTML = "There is no available data for one or both players from the inputted season(s)."
-            }
+            // if (document.querySelector("#search-error").innerHTML === ""){
+                document.querySelector("#search-error").innerHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; color: rgba(214, 58, 58, 0.827);;">error</span> There is no available data for one or both players from the inputted season(s). Check for typos or try different player(s).`
+            // }
         });
     }
     
@@ -61,11 +61,11 @@ const Players = ({player1, player2, btnClick, findStats}) => {
 
         // If either of the players stats are NULL (missing)
         if (typeof player1.stats === 'undefined' || player1.stats === null){
-            document.querySelector("#search-error").innerHTML=`${player1.name} did not play in the ${document.querySelector("#season-1").value}-${parseInt(document.querySelector("#season-1").value)+1} season or his stats are unavailable.`;
+            document.querySelector("#search-error").innerHTML=`<span class="material-symbols-outlined" style="vertical-align: middle; color: rgba(214, 58, 58, 0.827);;">error</span> ${player1.name} did not play in the ${document.querySelector("#season-1").value}-${parseInt(document.querySelector("#season-1").value)+1} season or his stats are unavailable.`;
             throw new Error("Missing Stats");
         }
         else if (typeof player2.stats === 'undefined' || player2.stats === null){
-            document.querySelector("#search-error").innerHTML=`${player2.name} did not play in the ${document.querySelector("#season-2").value}-${parseInt(document.querySelector("#season-2").value)+1} season or his stats are unavailable.`;
+            document.querySelector("#search-error").innerHTML=`<span class="material-symbols-outlined" style="vertical-align: middle; color: rgba(214, 58, 58, 0.827);;">error</span> ${player2.name} did not play in the ${document.querySelector("#season-2").value}-${parseInt(document.querySelector("#season-2").value)+1} season or his stats are unavailable.`;
             throw new Error("Missing Stats");
         }
 

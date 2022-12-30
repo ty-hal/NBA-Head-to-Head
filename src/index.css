@@ -1,3 +1,14 @@
+/* Logos */
+.material-symbols-outlined {
+  margin: 0 5px;
+  color: rgba(214, 58, 58, 0.827);
+  font-variation-settings:
+    'FILL' 0, /*0 to 1*/
+    'wght' 600, /*100 to 700*/
+    'GRAD' 0, /*-50 to 200*/
+    'opsz'48 /*20 to 48*/
+}
+
 body {
   margin: 0;
   background:#4e6878ac;
@@ -109,6 +120,30 @@ header nav{
 #message{
   margin: auto;
   width: 95%;
+  font-size: 18px;
+}
+#message p span{
+  position: relative;
+  text-align:center;
+}
+
+#help-content{
+  display: none;
+  white-space: normal;
+  position: absolute;
+  font: 400 17px 'Times New Roman', Times, serif;
+  border: 2px black solid;
+  border-radius: 20px;
+  width: 200px;
+  margin-left: -90px;
+}
+#help-content p{
+  margin: 10px;
+}
+
+#message p span:hover #help-content{
+  display: block;
+  background-color: rgb(156, 156, 171);
 }
   
   /* PLAYER SEARCH AREAS */
@@ -171,7 +206,7 @@ header nav{
   text-align: left;
   padding: 5px;
   margin-bottom: 1px;
-  font-size: 13px;
+  font-size: 14px;
   color: black;
 }
 
@@ -216,6 +251,7 @@ header nav{
   /* PLAYER STATS */
 #search-error{
   margin-top: 10px;
+  font-size: 18px;
 }
 .player-stats{
   margin: auto;
@@ -332,6 +368,9 @@ header nav{
   }
   .title{
     visibility: hidden;
+  }
+  #help-content{
+    margin-left: -175px;
   }
 }
 
